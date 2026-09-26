@@ -1,0 +1,16 @@
+generated: '2026-09-26'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: atlasmagnetics.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 21 06:07:16 2026 GMT
+  hsts: false
+domains:
+- domain: atlasmagnetics.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

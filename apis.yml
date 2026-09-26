@@ -1,23 +1,76 @@
 aid: atlasmagnetics
+
 name: Atlasmagnetics
-description: 'Atlasmagnetics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://atlasmagnetics.com/images/am-building.webp
+
+description: Atlas Magnetics is a Southern California based manufacturer of custom solenoids, magnetic components, μASICs, DC/DC converters and
+  load switches. It serves aerospace, defense and industrial customers, offering standard components with full datasheets and evaluation boards
+  available in‑stock through distribution partners. The company provides engineering resources, design services and rapid prototyping to accelerate
+  product development.
+
 url: https://raw.githubusercontent.com/api-evangelist/atlasmagnetics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Manufacturing
+- Magnetic Components
+- Aerospace
+- Defense
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atlasmagnetics-hosts.yml
+- type: Vendors
+  url: vendors/atlasmagnetics-vendors.yml
+- type: Newsroom
+  url: https://atlasmagnetics.com/news/am1u1412-goes-to-mass-production
+- type: DomainSecurity
+  url: security/atlasmagnetics-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/atlasmagnetics
+  url: https://atlasmagnetics.com
+- type: Documentation
+  url: https://atlasmagnetics.com/resources
+- type: PrivacyPolicy
+  url: https://atlasmagnetics.com/page/privacy-policy
+
+apis:
+- name: Atlas Magnetics API
+  description: API documentation for Atlas Magnetics products and services.
+  humanURL: https://atlasmagnetics.com/resources
+  baseURL: null
+  aid: atlasmagnetics:atlas-magnetics-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are rendered via JavaScript, preventing machine‑readable contract discovery.
+  evidence:
+  - url: https://atlasmagnetics.com/resources
+    status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
